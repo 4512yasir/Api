@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    background-color: black;
+    font-family: 'poppins' sans-serif;
+}
+header{
+    background-color: aqua;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+.Search{
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    bottom: 2px solid;
+    background-color: transparent;
+    font-family: sans-serif;
+    color: antiquewhite;
+    outline: none;
+}
+.Search::placeholder{
+    color: aliceblue;
+}
+form{
+    border-radius: 50px;
+}
+
+#main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem 3rem;
+    color: black;
+    font-size: 23px;
+}
+.movie{
+width: 100%;
+overflow: hidden;
+margin: 1rem;
+position: relative;
+color: black;
+
+}
+.movie img{
+    width: 100%;
+    padding: 1rem 3rem;
+}
+.movie-info{
+    display: flex;
+    justify-content: space-between;
+    position: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+    align-items: center;
+    /* background-color: aliceblue; */
+}
+.movie-info span.green{
+    color: green;
+}
+.movie-info span.yellow {
+    color: yellow;
+}
+.movie-info h3{
+    color: white;
+}
+.movie-info span.red {
+    color: red;
+}
+.overview{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    padding: 2rem;
+    transform: translateY(100%);
+    transition: transform 1s ease-in;
+  width: 100%;
+    overflow: hidden;
+}
+.overview h2{
+    margin-top: 0;
+background-color: bisque;
+}
+.movie-info span{
+    
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    
+}
+
+.movie:hover .overview{
+transform: translateY(0);
+color: black;
+}
+
+@media screen and (max-width:800px) {
+    #main{
+        display: block;
+    }
+}
